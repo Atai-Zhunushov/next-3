@@ -3,7 +3,12 @@ import {NextPage} from "next";
 import {useRouter} from "next/router";
 import RootLayout from "@/app/layout";
 
-const PostPage = ({user}) => {
+interface User {
+    id: number;
+    name: string;
+}
+
+const PostPage = ({ user }: { user: User })  => {
     const {asPath, pathname, push} = useRouter()
 
     return (
