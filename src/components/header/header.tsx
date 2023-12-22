@@ -10,6 +10,11 @@ import {useEffect} from "react";
 const Header = () => {
 
     const pathname = usePathname();
+    if (!pathname) {
+        // Можно вернуть заглушку или некоторый альтернативный контент,
+        // если pathname пока не определен
+        return <div>Loading...</div>;
+    }
 
     console.log(pathname)
     return (
