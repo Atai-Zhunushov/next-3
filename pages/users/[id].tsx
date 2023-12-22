@@ -6,6 +6,7 @@ import RootLayout from "@/app/layout";
 interface User {
     id: number;
     name: string;
+    phone: number;
 }
 
 const PostPage = ({ user }: { user: User })  => {
