@@ -29,6 +29,7 @@ const Pokemons = ({pokemons}) => {
                     <div key={index} >
                         <h2>{pokemon.name}</h2>
                         <Image src={pokemon.img} alt={pokemon.name} width={100} height={100}/>
+                        <p></p>
                         {/* Другая информация о покемоне */}
                     </div>
                 ))}
