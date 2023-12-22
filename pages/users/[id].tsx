@@ -8,6 +8,9 @@ interface User {
     name: string;
     phone: number;
 }
+type Params = {
+    id: string; // Замените этим вашим ожидаемым типом параметра
+};
 
 const PostPage = ({ user }: { user: User })  => {
     const {asPath, pathname, push} = useRouter()
@@ -24,7 +27,7 @@ const PostPage = ({ user }: { user: User })  => {
 
 export default PostPage;
 
-export async function getServerSideProps({params}) {
+export async function getServerSideProps({ params }: { params: Params }) {
     const response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
     const user = await response.json()
 
